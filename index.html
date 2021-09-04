@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boottrap- 4.5.3</title>
+    <script>
+      // const d = new Date();
+      // console.log(d);
+      var d=new Date();
+     var n =d.getDay();
+     var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+       console.log("Today is: "+daylist[n]);
+       var hour= d.getHours();
+      //  var prepand = (hour >= 12)? " PM ":" AM ";
+       var minute = d.getMinutes();
+       var second = d.getSeconds();
+      var prepand = (hour >= 12)? " PM ":" AM ";
+      // var prepand1 = (hour <= 60)? " 
+      hour = (hour >= 12)? hour - 12: hour;
+      //  minute =(min <=60)? minute-60: min;
+      if (hour===0 && prepand===' PM ') 
+      { 
+      if (minute===0 && second===0)
+      { 
+      hour=12;
+      prepand=' Noon';
+       } 
+      else
+     {  
+     hour=12;
+      prepand=' PM';
+      } 
+      } 
+     if (hour===0 && prepand===' AM ') 
+      { 
+     if (minute===0 && second===0)
+       { 
+      hour=12;
+       prepand=' Midnight';
+     } 
+      else
+      { 
+      hour=12;
+     prepand=' AM';
+      } 
+     } 
+      console.log("Current Time : "+hour + prepand + " : " + minute + ""+" min" +" : " + second+""+"sec");
+      //  console.log("Current Time is:" +hours )
+    //   console.log("Today is" +dd);
+    //   const dd = Date.currentTime();
+    //  console.log("Current Time is")
+   //     write a javascript program  to display the current day and time ?
+
+   // output : today is friday
+ // current time is : 5pm: 24min : 60sec
+ //     O/P -
+ //     Today is : Name of the day
+</script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" >
+</head>
+<body>
+    <h1 class="text-center">header1</h1>
+    <!-- <div class="float-left">Float left on all viewport sizes</div><br>
+   <div class="float-right">Float right on all viewport sizes</div><br>
+   <div class="float-none">Don't float on all viewport sizes</div>
+   <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      This is some text within a card body.
+    </div>
+  </div> -->
+  <script src="node_modules/jquery/dist/jquery.slim.min.js" ></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>
+
+
+  
+
+   
